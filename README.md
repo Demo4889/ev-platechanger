@@ -11,3 +11,8 @@ Feel free to do whatever you want.
 
 ### [Preview](https://c.fileglass.com/59bd7.png)
 ### [Video](https://youtu.be/yaS4xfmHQ1Y)
+
+
+### MAKE SURE YOU ADD THE ITEM TO YOUR QBCORE/SHARED.LUA FILE
+
+### BLOCK ANY UNWANTED NAMES IN THE BLACKLIST AREA
