@@ -10,8 +10,6 @@ version '2.0.0'
 
 shared_scripts {
     'config.lua',
-    '@es_extended/imports.lua'
-    --'@qb-core/import.lua'
 }
 
 client_scripts {
@@ -19,7 +17,6 @@ client_scripts {
 }
 
 server_scripts {
-    '@mysql-async/lib/MySQL.lua', -- Remove if using QBCore
     'server/*.lua'
 }
 

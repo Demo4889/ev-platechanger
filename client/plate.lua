@@ -1,13 +1,8 @@
-local stateEsx =  GetResourceState('es_extended') == 'started' or GetResourceState('extendedmode') == 'started'
-local stateQbus =  GetResourceState('qb-core') == 'started'
+local QBCore = exports['qb-core']:GetCoreObject()
 local isOpen = false
 
 local function showNoti(message)
-    if stateEsx then
-        ESX.ShowNotification(message)
-    elseif stateQbus then
-        QBCore.Functions.Notify(message)
-    end
+    QBCore.Functions.Notify(message)
 end
 
 -- NUI Callback
@@ -34,7 +29,7 @@ RegisterNUICallback('getPlateText', function(data, cb)
                     showNoti(Config.Locales.Error)
                 end
             else
-                showNoti(Config.Locales.ErrorDriver) 
+                showNoti(Config.Locales.ErrorDriver)
             end
         else
             showNoti(Config.Locales.ErrorVehicle)
@@ -76,9 +71,7 @@ AddEventHandler('playerSpawned', function()
     SendNUIMessage({
         action = 'key',
         key = Config.JsKey,
-        title = Config.PlateHeader,
-        chars = Config.EightChars,
-        buttons = Config.useButtons
+        title = Config.PlateHeader
     })
 end)
 
@@ -89,8 +82,7 @@ AddEventHandler('onClientResourceStart', function(resourceName)
             action = 'key',
             key = Config.JsKey,
             title = Config.PlateHeader,
-            chars = Config.EightChars,
-            buttons = Config.useButtons
+            chars = Config.EightChars
         })
     end
 end)
