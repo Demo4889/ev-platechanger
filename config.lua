@@ -13,7 +13,7 @@ Config.Locales = {
     ErrorPlate = 'Plate already exists',
     ErrorPlateReal = 'Your vehicle appears to be missing a real plate',
     ErrorCharsMin = 'Plate needs at least 1 character',
-    ErrorCharsMax = 'Somehow you passed more than 6 chars',
+    ErrorCharsMax = 'Somehow you passed more than 8 chars',
     NewPlate = 'Your new plate has been set!'
 }
 
